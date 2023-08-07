@@ -1,0 +1,24 @@
+a. Distributing Tickets to Multiple Assignees:
+
+One approach to distribute the tickets to multiple assignees is to evenly divide the tickets among the assignees.
+i) When assigning tickets, calculate the total number of tickets and the number of assignees.
+ii) Divide the total number of tickets by the number of assignees to determine the approximate number of tickets
+    each assignee will handle.
+iii) Assign the calculated number of tickets to each assignee, ensuring that the distribution is as even as possible.
+
+
+b. Auditing Ticket Updates and Viewing History:
+
+To audit ticket updates and view their history, you can create an Audit entity and associate it with the Ticket entity.
+i) Create an Audit entity with fields such as id, ticket_id, update_time, updated_by, old_status, new_status, etc.
+ii) Add a @OneToMany relationship from the Ticket entity to the Audit entity to represent the audit history for each ticket.
+iii) Whenever a ticket status is updated, create a new Audit record capturing the relevant information.
+iv)  Provide an API endpoint to retrieve the audit history for a specific ticket.
+
+c. Measuring Time Ticket Spent in Each Stage:
+
+To measure the time a ticket spends in each stage, you can use timestamp fields and calculate the time differences.
+i) Add timestamp fields for each stage in the Ticket entity, such as created_at, confirmed_at, technical_feedback_at, etc.
+ii) When a ticket transitions to a new stage, update the corresponding timestamp field with the current time.
+iii) Calculate the time spent in each stage by subtracting the entry timestamp from the exit timestamp for that stage.
+iv) Provide an API endpoint to retrieve the time spent in each stage for a specific ticket.
