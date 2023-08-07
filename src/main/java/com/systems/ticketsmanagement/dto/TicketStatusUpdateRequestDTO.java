@@ -1,4 +1,4 @@
-package dto;
+package com.systems.ticketsmanagement.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

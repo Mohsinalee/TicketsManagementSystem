@@ -2,7 +2,7 @@ package com.systems.ticketsmanagement.controller;
 
 import com.systems.ticketsmanagement.entity.Ticket;
 import com.systems.ticketsmanagement.repository.TicketRepository;
-import dto.TicketStatusUpdateRequestDTO;
+import com.systems.ticketsmanagement.dto.TicketStatusUpdateRequestDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
